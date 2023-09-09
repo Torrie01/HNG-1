@@ -4,13 +4,29 @@ body {
     margin: 0;
     padding: 0;
 }
-div {
+
+section {
     text-align: center;
     margin: 20px;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+main {
+    width: 270px;
+    margin:auto ;
+}
+div {
+    justify-self: center;
+    
+    
 }
 h1 {
     color: #333;
@@ -19,11 +35,20 @@ img {
     max-width: 100px;
     border-radius: 50%;
     margin: 10px;
+    justify-content: center;
 }
-p {
-    color: #666;
-}
+
 a {
     text-decoration: none;
     color: #007bff;
+}
+.left {    
+    text-align: left;
+    padding-bottom: 4px;
+}
+p {
+    font-weight: bold;
+}
+span {
+    font-weight: 500;
 }

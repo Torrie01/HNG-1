@@ -7,14 +7,28 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div>
+    <section>
+        <header>
         <h1 data-testid="slackUserName">Torrie Asifor</h1>
-        <img src="https://ca.slack-edge.com/T05FFAA91JP-U05QZMA49ST-a94a926a9deb-48" alt="Torrie Asifor" data-testid="slackDisplayImage">   
-        <p data-testid="currentDayOfTheWeek"></p>
-        <p data-testid="currentUTCTime" id="utc-time"></p>
-        <p><strong>Track:</strong> <span data-testid="myTrack">Frontend</span></p>
-        <a href="https://github.com/Torrie01/HNG-1" data-testid="githubURL">Github Repository</a>
-    </div>
+        <div>
+        <img src="https://ca.slack-edge.com/T05FFAA91JP-U05QZMA49ST-a94a926a9deb-48" alt="Torrie Asifor" data-testid="slackDisplayImage">
+        </div>
+        </header>
+        <main>
+        <div class="left">
+            <p>Current Day of the Week: <span data-testid="currentDayOfTheWeek"></span></p>
+        </div>
+        <div class="left">
+            <p>UTC Time: <span data-testid="currentUTCTime" id="utc-time"></span></p>
+        </div>
+        <div class="left">
+            <p>Track: <span data-testid="myTrack">Frontend</span></p>
+        </div>
+        <div class="left">
+            <p>Github Repository: <a href="https://github.com/Torrie01/HNG-1" data-testid="githubURL">https://github.com/Torrie01/HNG-1</a></p>
+        </div>
+        </main>
+    </section>
 
     <script src="script.js"></script>
 </body>
