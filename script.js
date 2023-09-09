@@ -1,9 +1,18 @@
-// JavaScript to update current day of the week and UTC time
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current day of the week
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const currentDate = new Date();
+    const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-const currentDate = new Date();
-const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
-const utcTime = currentDate.toUTCString();
+    // Get current UTC time (hours, minutes, and seconds)
+    const currentUTCHours = currentDate.getUTCHours();
+    const currentUTCMinutes = currentDate.getUTCMinutes();
+    const currentUTCSeconds = currentDate.getUTCSeconds();
 
-document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Current Day of the Week: ${dayOfWeek}`;
-document.querySelector('[data-testid="currentUTCTime"]').textContent = `Current UTC Time: ${utcTime}`;
+    // Display current day of the week and UTC time
+    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+    dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
+
+    const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+    utcTimeElement.textContent = `Current UTC Time: ${currentUTCHours}:${currentUTCMinutes}:${currentUTCSeconds}`;
+});
