@@ -24,9 +24,7 @@ main {
     margin:auto ;
 }
 div {
-    justify-self: center;
-    
-    
+    justify-self: center;   
 }
 h1 {
     color: #333;
