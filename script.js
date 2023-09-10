@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Display current day of the week
     const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-    dayOfWeekElement.textContent = `Current Day: ${currentDayOfWeek}`;
+    dayOfWeekElement.textContent = `Current Day of the week: ${currentDayOfWeek}`;
 
   // Display current UTC time with formatted minutes and milliseconds
     const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
-    utcTimeElement.textContent = `Current UTC Time: ${currentUTCHours}:${formattedUTCMinutes}:${currentUTCSeconds}.${formattedUTCMilliseconds}`;
+    utcTimeElement.textContent = `UTC Time: ${currentUTCHours}:${formattedUTCMinutes}:${currentUTCSeconds}.${formattedUTCMilliseconds}`;
 });
 
