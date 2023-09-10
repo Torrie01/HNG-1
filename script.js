@@ -1,27 +1,24 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Get the current day of the week
-    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+// Get references to the elements by their data-testid attributes
+const slackNameElement = document.querySelector('[data-testid="slackUserName"]');
+const currentDayElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+
+// Function to update the current day of the week
+function updateCurrentDay() {
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const currentDate = new Date();
-    const currentDayOfWeek = daysOfWeek[currentDate.getUTCDay()];
+    const currentDay = daysOfWeek[currentDate.getUTCDay()];
+    currentDayElement.textContent = currentDay;
+}
 
-  // Get current UTC time (hours, minutes, seconds, and milliseconds)
-    const currentUTCHours = currentDate.getUTCHours();
-    const currentUTCMinutes = currentDate.getUTCMinutes();
-    const currentUTCSeconds = currentDate.getUTCSeconds();
-    const currentUTCMilliseconds = currentDate.getUTCMilliseconds();
+// Function to update the current UTC time with milliseconds
+function updateCurrentUTCTime() {
+    const currentDate = new Date();
+    const utcMilliseconds = currentDate.getUTCMilliseconds();
+    currentUTCTimeElement.textContent = utcMilliseconds.toString().padStart(3, '0');
+}
 
-  // Format minutes with leading zeros
-    const formattedUTCMinutes = currentUTCMinutes.toString().padStart(2, '0');
-
-  // Format milliseconds with leading zeros and three decimal places
-    const formattedUTCMilliseconds = currentUTCMilliseconds.toString().padStart(3, '0');
-
-  // Display current day of the week
-    const dayOfWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
-    dayOfWeekElement.textContent = `Current Day of the week: ${currentDayOfWeek}`;
-
-  // Display current UTC time with formatted minutes and milliseconds
-    const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
-    utcTimeElement.textContent = `UTC Time: ${currentUTCHours}:${formattedUTCMinutes}:${currentUTCSeconds}.${formattedUTCMilliseconds}`;
-});
+// Call the functions to update the elements
+updateCurrentDay();
+updateCurrentUTCTime();
 
