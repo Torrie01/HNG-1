@@ -21,4 +21,3 @@ document.addEventListener("DOMContentLoaded", function() {
     const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
     utcTimeElement.textContent = `UTC Time: ${currentUTCHours}:${UTCMinutes}:${currentUTCSeconds}.${currentUTCMilliseconds}`;
 });
-    
