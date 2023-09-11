@@ -21,12 +21,5 @@
 }
 
 .display #githubURL a{
-    background-color: #82b8f3;
-    color: #fff;
-    padding: 5px 10px;
     text-decoration: none;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 16px;
 }
